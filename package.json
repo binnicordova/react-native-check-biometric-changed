@@ -1,6 +1,6 @@
 {
   "name": "react-native-check-biometric-changed",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "helps you to detect when the biometric register changed",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -27,22 +27,22 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepare": "bob build",
     "release": "release-it",
-    "example": "yarn --cwd example",
+    "example": "bun --cwd example",
     "pods": "cd example && pod-install --quiet",
-    "bootstrap": "yarn example && yarn && yarn pods"
+    "bootstrap": "bun run example install && bun install && bun run pods"
   },
   "keywords": [
     "react-native",
     "ios",
     "android"
   ],
-  "repository": "https://github.com/BinniZenobioCordovaLeandro/react-native-check-biometric-changed",
-  "author": "Binni Zenobio Cordova Leandro <binni.2000.cordova@gmail.com> (https://github.com/BinniZenobioCordovaLeandro)",
+  "repository": "https://github.com/binnicordova/react-native-check-biometric-changed",
+  "author": "Binni Zenobio Cordova Leandro <binni.2000.cordova@gmail.com> (https://github.com/binnicordova)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BinniZenobioCordovaLeandro/react-native-check-biometric-changed/issues"
+    "url": "https://github.com/binnicordova/react-native-check-biometric-changed/issues"
   },
-  "homepage": "https://github.com/BinniZenobioCordovaLeandro/react-native-check-biometric-changed#readme",
+  "homepage": "https://github.com/binnicordova/react-native-check-biometric-changed#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -81,7 +81,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint && yarn typescript"
+      "pre-commit": "bun run lint && bun run typescript"
     }
   },
   "commitlint": {
@@ -149,5 +149,13 @@
         }
       ]
     ]
+  },
+  "resolutions": {
+    "@types/react": "^16.14.32",
+    "@types/node": "^18.19.0"
+  },
+  "overrides": {
+    "@types/react": "^16.14.32",
+    "@types/node": "^18.19.0"
   }
 }

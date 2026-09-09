@@ -185,17 +185,4 @@ final class CheckBiometricChanged: NSObject {
     resolve(true)
   }
 
-  // MARK: - multiply
-
-  /// Scaffolding from the React Native library generator. Not part of the
-  /// security API; kept so existing imports keep resolving.
-  @objc(multiply:withB:withResolver:withRejecter:)
-  func multiply(
-    a: Float,
-    b: Float,
-    resolve: RCTPromiseResolveBlock,
-    reject: RCTPromiseRejectBlock
-  ) {
-    resolve(a * b)
-  }
 }

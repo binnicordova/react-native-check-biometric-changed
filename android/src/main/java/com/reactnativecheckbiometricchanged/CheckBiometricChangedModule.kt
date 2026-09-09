@@ -191,19 +191,6 @@ class CheckBiometricChangedModule(reactContext: ReactApplicationContext) :
 
   // endregion
 
-  // region multiply
-
-  /**
-   * Scaffolding from the React Native library generator. Not part of the
-   * security API; kept so existing imports keep resolving.
-   */
-  @ReactMethod
-  fun multiply(a: Int, b: Int, promise: Promise) {
-    promise.resolve(a * b)
-  }
-
-  // endregion
-
   // region internals
 
   private fun canAuthenticate(): Int =

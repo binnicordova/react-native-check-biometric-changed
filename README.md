@@ -70,7 +70,7 @@ if (await biometricsChanged()) {
 | `verifyBiometric()` | `Promise<boolean>` | Presents the system biometric prompt. `false` means cancelled or failed — never "not the owner" |
 | `refreshTracker()` | `Promise<boolean>` | Stores the current enrolment as trusted. Never call it unconditionally |
 
-Runnable demo in [`/example`](https://github.com/BinniZenobioCordovaLeandro/react-native-check-biometric-changed/tree/main/example).
+Runnable demo in [`/example`](https://github.com/binnicordova/react-native-check-biometric-changed/tree/main/example).
 
 ## Why it matters
 
@@ -88,11 +88,31 @@ Face ID proves *a* valid biometric is present — never that it is *the same* on
 
 Neither platform reads, derives, transmits or stores biometric data. There is no server and no network call.
 
+## Biometric support
+
+| Modality | iOS | Android |
+| --- | --- | --- |
+| Fingerprint / Touch ID | ✅ | ✅ Class 3 essentially always |
+| Face ID / face unlock | ✅ | ⚠️ only if the OEM ships it as Class 3 |
+| Iris | — | ✅ if Class 3 |
+| Passcode / PIN / pattern | ❌ by design | ❌ by design |
+
+Android can only track **Class 3 (strong)** biometrics, because Keystore keys can
+only be gated by Class 3. A Class 2 face enrolment — what most OEM face unlock
+actually is — cannot be detected, and no Android API reports weak-biometric
+enrolment changes. Fingerprint is Class 3 nearly everywhere, so it is always
+covered. Dropping to `BIOMETRIC_WEAK` would not help: it breaks the Keystore
+mechanism outright and you would lose fingerprint detection too.
+
 ## Status
 
 - **Detection is not attribution.** The OS reports *that* the enrolment set changed, never *who* changed it or to what. Treat any change as untrusted and re-authenticate.
 - **A lockout is not a change.** Too many failed attempts rejects with `BIOMETRICS_LOCKED_OUT` rather than resolving `true`, so a wrong thumb never tears down a session.
 - **This is one control, not a security architecture.** Pair it with server-side session revocation, jailbreak/root detection and certificate pinning.
+
+Verified on a Samsung SM-A266M (Android 16): the Keystore baseline is minted and
+probed correctly on device, and that handset reports face as Class 2 and
+fingerprint as Class 3 — the split described above, in the wild.
 
 ## Author
 

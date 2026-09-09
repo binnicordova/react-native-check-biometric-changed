@@ -39,7 +39,7 @@ export const BiometricErrorCode = {
 } as const;
 
 export type BiometricErrorCode =
-  typeof BiometricErrorCode[keyof typeof BiometricErrorCode];
+  (typeof BiometricErrorCode)[keyof typeof BiometricErrorCode];
 
 /**
  * Whether the device's biometric enrolment differs from the stored baseline.
@@ -83,12 +83,4 @@ export function verifyBiometric(): Promise<boolean> {
  */
 export function refreshTracker(): Promise<boolean> {
   return CheckBiometricChanged.refreshTracker().then(Boolean);
-}
-
-/**
- * Scaffolding from the React Native library generator. Not part of the
- * security API.
- */
-export function multiply(a: number, b: number): Promise<number> {
-  return CheckBiometricChanged.multiply(a, b);
 }

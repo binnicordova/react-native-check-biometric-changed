@@ -5,7 +5,6 @@ jest.mock('react-native', () => ({
       biometricsChanged: jest.fn(),
       verifyBiometric: jest.fn(),
       refreshTracker: jest.fn(),
-      multiply: jest.fn(),
     },
   },
 }));
@@ -14,7 +13,6 @@ import { NativeModules } from 'react-native';
 import {
   BiometricErrorCode,
   biometricsChanged,
-  multiply,
   refreshTracker,
   verifyBiometric,
 } from '../index';
@@ -124,13 +122,5 @@ describe('the documented usage flow', () => {
     }
 
     expect(native.refreshTracker).not.toHaveBeenCalled();
-  });
-});
-
-describe('multiply', () => {
-  it('passes through to the native scaffolding', async () => {
-    native.multiply.mockResolvedValue(21);
-    await expect(multiply(3, 7)).resolves.toBe(21);
-    expect(native.multiply).toHaveBeenCalledWith(3, 7);
   });
 });
