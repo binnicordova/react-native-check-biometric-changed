@@ -49,6 +49,10 @@ final class CheckBiometricChanged: NSObject {
   ) {
     let context = LAContext()
     var evaluationError: NSError?
+    // Order matters: `evaluatedPolicyDomainState` stays nil until a policy has
+    // been evaluated on this context. Reading it first yields nil silently,
+    // which reads as "no biometrics" rather than as a mistake. Verified on the
+    // simulator: nil before this call, 32 bytes after it.
     let canEvaluate = context.canEvaluatePolicy(Self.policy, error: &evaluationError)
     let baseline = BiometricTrackerStore.load()
 
@@ -165,6 +169,8 @@ final class CheckBiometricChanged: NSObject {
     let context = LAContext()
     var evaluationError: NSError?
 
+    // The policy evaluation must stay first: it is what populates
+    // `evaluatedPolicyDomainState`. Reordering this guard silently breaks it.
     guard context.canEvaluatePolicy(Self.policy, error: &evaluationError),
           let current = context.evaluatedPolicyDomainState
     else {

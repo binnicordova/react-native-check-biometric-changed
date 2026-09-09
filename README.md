@@ -112,7 +112,9 @@ mechanism outright and you would lose fingerprint detection too.
 
 Verified on a Samsung SM-A266M (Android 16): the Keystore baseline is minted and
 probed correctly on device, and that handset reports face as Class 2 and
-fingerprint as Class 3 — the split described above, in the wild.
+fingerprint as Class 3 — the split described above, in the wild. On an iOS 26.5
+simulator, `evaluatedPolicyDomainState` returns a real 32-byte enrolment state
+and the module rejects rather than guessing when its baseline is unreadable.
 
 ## Author
 
