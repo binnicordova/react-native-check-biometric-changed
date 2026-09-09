@@ -37,7 +37,10 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/binnicordova/react-native-check-biometric-changed",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binnicordova/react-native-check-biometric-changed.git"
+  },
   "author": "Binni Zenobio Cordova Leandro <binni.2000.cordova@gmail.com> (https://github.com/binnicordova)",
   "license": "MIT",
   "bugs": {
