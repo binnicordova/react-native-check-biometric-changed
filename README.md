@@ -17,7 +17,7 @@
 >
 > Is the biometric protecting this session still the same one enrolled when the session was granted? When the answer is no, revoke the session before the new face inherits it.
 
-## Install — zero friction
+## Install — zero friction - 5000+ DOWNLOADS
 
 <img src="assets/zero-friction.svg" alt="Zero friction: three steps, no native surgery" width="100%">
 
