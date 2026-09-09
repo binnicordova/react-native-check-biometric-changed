@@ -1,6 +1,6 @@
 {
   "name": "react-native-check-biometric-changed",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "helps you to detect when the biometric register changed",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
