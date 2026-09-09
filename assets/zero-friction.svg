@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="398" viewBox="0 0 760 398" role="img" aria-label="Zero friction integration in three steps">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/><stop offset="100%" stop-color="#111C33"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0 L0 0 0 32" fill="none" stroke="#1E293B" stroke-width="1" opacity="0.42"/>
+    </pattern>
+  </defs>
+  <rect width="760" height="398" fill="url(#bg)"/>
+  <rect width="760" height="398" fill="url(#grid)"/>
+
+  <text x="380" y="40" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Zero friction. Three steps. No native surgery.</text>
+  <text x="380" y="64" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#94A3B8">No entitlements. No config plugin. No AppDelegate edits. No runtime prompts.</text>
+  <rect x="22" y="84" width="716" height="72" rx="10" fill="#0F1A2E" stroke="#1E3A5F" stroke-width="1.4"/>
+  <circle cx="50" cy="120" r="15" fill="#0B2A3A" stroke="#22D3EE" stroke-width="1.4"/>
+  <text x="50" y="125" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#67E8F9">1</text>
+  <text x="78" y="112" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#F1F5F9">Install</text>
+  <text x="78" y="134" font-family="'SFMono-Regular',Consolas,Menlo,monospace" font-size="11.5" fill="#7DD3FC">npm i react-native-check-biometric-changed</text>
+  <text x="78" y="150" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#94A3B8">Autolinking registers it. Nothing to touch in AppDelegate.</text>
+  <text x="724" y="112" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#34D399">~10s</text>
+  <rect x="22" y="166" width="716" height="72" rx="10" fill="#0F1A2E" stroke="#1E3A5F" stroke-width="1.4"/>
+  <circle cx="50" cy="202" r="15" fill="#0B2A3A" stroke="#22D3EE" stroke-width="1.4"/>
+  <text x="50" y="207" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#67E8F9">2</text>
+  <text x="78" y="194" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#F1F5F9">Link the pod</text>
+  <text x="78" y="216" font-family="'SFMono-Regular',Consolas,Menlo,monospace" font-size="11.5" fill="#7DD3FC">cd ios &amp;&amp; pod install</text>
+  <text x="78" y="232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#94A3B8">iOS links Apple&#8217;s own LocalAuthentication.</text>
+  <text x="724" y="194" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#34D399">~30s</text>
+  <rect x="22" y="248" width="716" height="72" rx="10" fill="#0F1A2E" stroke="#1E3A5F" stroke-width="1.4"/>
+  <circle cx="50" cy="284" r="15" fill="#0B2A3A" stroke="#22D3EE" stroke-width="1.4"/>
+  <text x="50" y="289" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#67E8F9">3</text>
+  <text x="78" y="276" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#F1F5F9">Call three functions</text>
+  <text x="78" y="298" font-family="'SFMono-Regular',Consolas,Menlo,monospace" font-size="11.5" fill="#7DD3FC">biometricsChanged() &#183; verifyBiometric() &#183; refreshTracker()</text>
+  <text x="78" y="314" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#94A3B8">That is the entire public API surface.</text>
+  <text x="724" y="276" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#34D399">~20s</text>
+  <rect x="22" y="334" width="716" height="52" rx="10" fill="#0A1526" stroke="#1E3A5F" stroke-width="1.4"/>
+  <rect x="22" y="334" width="716" height="3" rx="1.5" fill="url(#acc)"/>
+  <text x="93" y="360" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#67E8F9">0</text>
+  <text x="93" y="377" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" letter-spacing="0.8" fill="#94A3B8">RUNTIME DEPS</text>
+  <text x="236" y="360" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#67E8F9">0</text>
+  <text x="236" y="377" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" letter-spacing="0.8" fill="#94A3B8">RUNTIME PROMPTS</text>
+  <text x="380" y="360" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#67E8F9">0</text>
+  <text x="380" y="377" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" letter-spacing="0.8" fill="#94A3B8">SERVERS</text>
+  <text x="523" y="360" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#67E8F9">0</text>
+  <text x="523" y="377" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" letter-spacing="0.8" fill="#94A3B8">BIOMETRICS STORED</text>
+  <text x="666" y="360" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#34D399">3</text>
+  <text x="666" y="377" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" letter-spacing="0.8" fill="#94A3B8">FUNCTIONS</text>
+</svg>

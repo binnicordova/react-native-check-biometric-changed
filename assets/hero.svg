@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="330" viewBox="0 0 760 330" role="img" aria-label="check-biometric-changed - Same device. Different human. Detect it.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/><stop offset="100%" stop-color="#111C33"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0 L0 0 0 32" fill="none" stroke="#1E293B" stroke-width="1" opacity="0.42"/>
+    </pattern>
+  </defs>
+  <rect width="760" height="330" fill="url(#bg)"/>
+  <rect width="760" height="330" fill="url(#grid)"/>
+
+  <rect x="0" y="0" width="760" height="3" fill="url(#acc)"/>
+  <g transform="translate(312,58) scale(0.54)" fill="none" stroke="#22D3EE" stroke-linecap="round" opacity="0.92">
+    <path d="M-52,49.6 A52,62 0 1 1 52,49.6" stroke-width="6.7" opacity="0.3"/>
+    <path d="M-41,39.2 A41,49 0 1 1 41,39.2" stroke-width="6.7" opacity="0.48"/>
+    <path d="M-30,28.8 A30,36 0 1 1 30,28.8" stroke-width="6.7" opacity="0.66"/>
+    <path d="M-19,18.4 A19,23 0 1 1 19,18.4" stroke-width="6.7" opacity="0.85"/>
+    <path d="M-8,20 A8,10 0 1 1 8,20" stroke-width="6.7"/>
+  </g>
+  <path d="M358,58 L402,58" stroke="#475569" stroke-width="1.8" stroke-dasharray="4 4" fill="none"/>
+  <g transform="translate(448,58) scale(0.54)" fill="none" stroke="#F87171" stroke-linecap="round" opacity="0.92">
+    <path d="M-52,49.6 A52,62 0 1 1 52,49.6" stroke-width="6.7" opacity="0.3"/>
+    <path d="M-41,39.2 A41,49 0 1 1 41,39.2" stroke-width="6.7" opacity="0.48"/>
+    <path d="M-30,28.8 A30,36 0 1 1 30,28.8" stroke-width="6.7" opacity="0.66"/>
+    <path d="M-19,18.4 A19,23 0 1 1 19,18.4" stroke-width="6.7" opacity="0.85"/>
+    <path d="M-8,20 A8,10 0 1 1 8,20" stroke-width="6.7"/>
+    <path d="M-46,-40 L46,44" stroke-width="9.3"/>
+  </g>
+  <text x="380" y="134" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" letter-spacing="3.4" fill="#22D3EE">REACT&#160;NATIVE&#160;&#183;&#160;MOBILE&#160;IDENTITY&#160;INTEGRITY</text>
+  <text x="380" y="174" text-anchor="middle" font-family="'SFMono-Regular',Consolas,Menlo,monospace" font-size="27" font-weight="700" fill="#F8FAFC">check-biometric-changed</text>
+  <text x="380" y="213" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="23" font-weight="700" fill="#E2E8F0">Same device. Different human. Detect it.</text>
+  <text x="380" y="241" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#94A3B8">The biometric re-binding check banking apps are expected to ship.</text>
+  <rect x="196" y="263" width="116" height="29" rx="14.5" fill="#0F1E33" stroke="#22D3EE" stroke-opacity="0.45"/>
+  <text x="254" y="282" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#67E8F9">0 servers</text>
+  <rect x="322" y="263" width="116" height="29" rx="14.5" fill="#0F1E33" stroke="#22D3EE" stroke-opacity="0.45"/>
+  <text x="380" y="282" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#67E8F9">0 runtime deps</text>
+  <rect x="448" y="263" width="116" height="29" rx="14.5" fill="#0F1E33" stroke="#22D3EE" stroke-opacity="0.45"/>
+  <text x="506" y="282" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#67E8F9">0 native edits</text>
+  <text x="380" y="315" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" letter-spacing="1.2" fill="#64748B">built by <tspan fill="#34D399" font-weight="700">BinniCordova.com</tspan></text>
+</svg>

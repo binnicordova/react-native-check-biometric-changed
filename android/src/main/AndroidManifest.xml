@@ -1,4 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.reactnativecheckbiometricchanged">
 
+    <!-- Normal permission: granted at install, no runtime prompt.
+         androidx.biometric also declares it; listing it here keeps the
+         library's requirement explicit. -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
 </manifest>

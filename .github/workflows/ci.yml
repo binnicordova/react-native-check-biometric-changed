@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  js:
+    name: Lint, typecheck, test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - run: bun run lint
+      - run: bun run typescript
+      - run: bun run test
+      - run: bun run prepare
+
+  android:
+    name: Android build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      # AGP 3.5.3 / Gradle 6.2 do not run on JDK 17+.
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '11'
+      - uses: android-actions/setup-android@v3
+      - run: bun install --frozen-lockfile
+      - run: bun install --frozen-lockfile
+        working-directory: example
+      - name: Assemble the example app (compiles the library module)
+        working-directory: example/android
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
+
+  ios:
+    name: iOS build
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - run: bun install --frozen-lockfile
+        working-directory: example
+      - run: pod install
+        working-directory: example/ios
+      - name: Build for the simulator
+        working-directory: example/ios
+        run: |
+          xcodebuild \
+            -workspace CheckBiometricChangedExample.xcworkspace \
+            -scheme CheckBiometricChangedExample \
+            -sdk iphonesimulator \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            build

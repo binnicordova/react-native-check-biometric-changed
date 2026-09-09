@@ -4,10 +4,10 @@ We want this community to be friendly and respectful to each other. Please follo
 
 ## Development workflow
 
-To get started with the project, run `yarn` in the root directory to install the required dependencies for each package:
+To get started with the project, run `bun install` in the root directory to install the required dependencies for each package:
 
 ```sh
-yarn
+bun install
 ```
 
 While developing, you can run the [example app](/example/) to test your changes.
@@ -15,38 +15,38 @@ While developing, you can run the [example app](/example/) to test your changes.
 To start the packager:
 
 ```sh
-yarn example start
+bun run example start
 ```
 
 To run the example app on Android:
 
 ```sh
-yarn example android
+bun run example android
 ```
 
 To run the example app on iOS:
 
 ```sh
-yarn example ios
+bun run example ios
 ```
 
 Make sure your code passes TypeScript and ESLint. Run the following to verify:
 
 ```sh
-yarn typescript
-yarn lint
+bun run typescript
+bun run lint
 ```
 
 To fix formatting errors, run the following:
 
 ```sh
-yarn lint --fix
+bun run lint --fix
 ```
 
 Remember to add tests for your change if possible. Run the unit tests by:
 
 ```sh
-yarn test
+bun run test
 ```
 
 To edit the Objective-C files, open `example/ios/CheckBiometricChangedExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > react-native-check-biometric-changed`.
@@ -78,13 +78,13 @@ Our pre-commit hooks verify that the linter and tests pass when committing.
 
 The `package.json` file contains various scripts for common tasks:
 
-- `yarn bootstrap`: setup project by installing all dependencies and pods.
-- `yarn typescript`: type-check files with TypeScript.
-- `yarn lint`: lint files with ESLint.
-- `yarn test`: run unit tests with Jest.
-- `yarn example start`: start the Metro server for the example app.
-- `yarn example android`: run the example app on Android.
-- `yarn example ios`: run the example app on iOS.
+- `bun run bootstrap`: setup project by installing all dependencies and pods.
+- `bun run typescript`: type-check files with TypeScript.
+- `bun run lint`: lint files with ESLint.
+- `bun run test`: run unit tests with Jest.
+- `bun run example start`: start the Metro server for the example app.
+- `bun run example android`: run the example app on Android.
+- `bun run example ios`: run the example app on iOS.
 
 ### Sending a pull request
 
